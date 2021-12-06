@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Books Librabry</title>
+	</head>
+	<body>
+		<header>
+			<h1>Books Library</h1>
+		</header>
+		<main class="main_container">
+			<form class="form_container">
+				<div class="form-inputs_container">
+					<div class="title_container">
+						<label for="title">Title Book</label>
+						<input class="input" type="text" name="title" id="title" placeholder="write your title" minlength="1" />
+					</div>
+					<div class="author_container">
+						<label for="author">Author Book</label>
+						<input class="input" type="text" name="author" id="author" placeholder="write your author" minlength="3" />
+					</div>
+					<fieldset class="priority_container">
+						<legend>Please choose your prioryty</legend>
+						<div>
+							<input type="radio" id="priority_1" name="priority" value="1" />
+							<label for="priority_1">1</label>
+						</div>
+						<div>
+							<input type="radio" id="priority_2" name="priority" value="2" />
+							<label for="priority_2">2</label>
+						</div>
+						<div>
+							<input type="radio" id="priority_3" name="priority" value="3" />
+							<label for="priority_3">3</label>
+						</div>
+						<div>
+							<input type="radio" id="priority_4" name="priority" value="4" />
+							<label for="priority_4">4</label>
+						</div>
+						<div>
+							<input type="radio" id="priority_5" name="priority" value="5" />
+							<label for="priority_5">5</label>
+						</div>
+					</fieldset>
+					<div>
+						<label for="category-select">Category</label>
+						<select class="input" name="category" id="category-select">
+							<option value="">--Please choose your category--</option>
+							<option value="Fantasy">Fantasy</option>
+							<option value="Action and Adventure">Action and Adventure</option>
+							<option value="Detective and Mystery">Detective and Mystery</option>
+						</select>
+					</div>
+					<button type="submit" class="button">click me</button>
+				</div>
+			</form>
+			<div>
+				<table class="table_container">
+					<caption class="table_caption">
+						All my books
+					</caption>
+					<thead class="table_thead">
+						<colgroup span="4"></colgroup>
+						<tr>
+							<th class="th">Title Book</th>
+							<th class="th">Author Book</th>
+							<th class="th">Priority</th>
+							<th class="th">Category</th>
+						</tr>
+					</thead>
+					<tbody class="parent_tbody">
+						<tr>
+							<td class="td title">The Godfather</td>
+							<td class="td author">Mario Puzo</td>
+							<td class="td priority">5</td>
+							<td class="td category">action novel</td>
+						</tr>
+						<tr>
+							<td class="td title">The Godfather</td>
+							<td class="td author">Mario Puzo</td>
+							<td class="td priority">5</td>
+							<td class="td category">action novel</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</main>
+
+		<script type="module" src="script.js"></script>
+	</body>
+</html>
