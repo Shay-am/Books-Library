@@ -1,27 +1,21 @@
 export const qs = selector => document.querySelector(selector);
-export const parentToAppend = qs(".parent_tbody");
+import { validInputAuthor, validInputTitle, isPriorityChecked, isCategoryChecked } from "./validForm.js";
 
-const title = qs("title");
-const author = qs("author");
-const prioryty = qs("prioryty");
-const category = qs("category");
+export const parentToAppend = qs(".parent_tbody");
+export const form = qs("form");
 
 export const createElementDomTr = () => document.createElement("tr");
 
-export const createElementDomTd = () => document.createElement("td");
+export const createElementDomTd = (value, toAppend) => {
+	const td = document.createElement("td");
+	td.textContent = value;
 
-export const generateTable = ({ title, author, priority, category }) => {
-	const tr = createElementDomTr();
-	const elementTdtitle = createElementDomTd();
-	const elementTdauthor = createElementDomTd();
-	const elementTdpriority = createElementDomTd();
-	const elementTdcategory = createElementDomTd();
+	return toAppend.append(td);
+};
 
-	elementTdtitle.textContent = title;
-	elementTdauthor.textContent = author;
-	elementTdpriority.textContent = priority;
-	elementTdcategory.textContent = category;
-
-	tr.append(elementTdtitle, elementTdauthor, elementTdpriority, elementTdcategory);
-	parentToAppend.append(tr);
+export const validForm = () => {
+	validInputTitle();
+	validInputAuthor();
+	isPriorityChecked();
+	isCategoryChecked();
 };

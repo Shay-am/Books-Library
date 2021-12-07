@@ -21,7 +21,13 @@
 .input {
 	width: 23em;
 	margin-top: 0.5em;
+	outline: none;
 }
+/* .input:invalid,
+fieldset:invalid {
+	border: 2px solid red;
+} */
+
 .title_container,
 .author_container,
 .priority_container,
@@ -31,8 +37,14 @@
 
 .priority_container {
 	display: flex;
+	flex-direction: column;
 	justify-content: space-around;
 	width: 19.2em;
+}
+.priority_fieldset {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
 }
 
 .button {
@@ -59,4 +71,17 @@
 }
 .th {
 	border: 1px solid blue;
+}
+
+.error {
+	border: 1px solid red;
+}
+.text_error {
+	font-size: 0.6em;
+	color: red;
+	display: block;
+}
+
+.hidden {
+	display: none;
 }

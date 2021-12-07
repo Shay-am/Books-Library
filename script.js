@@ -1,16 +1,7 @@
-import { qs, createElementDomTd, createElementDomTr, parentToAppend, generateTable } from "./javascript/helpers.js";
-import { addItemToLocalStorge, getItemFromLocalStorage } from "./javascript/utils.js";
-
-let form = qs("form");
+import { form, validForm } from "./javascript/helpers.js";
+import { getItemFromLocalStorage, handleAddBook } from "./javascript/utils.js";
 
 window.addEventListener("DOMContentLoaded", getItemFromLocalStorage);
+form.addEventListener("input", validForm);
 
-form.addEventListener("submit", e => {
-	e.preventDefault();
-	const data = Object.fromEntries(new FormData(e.target));
-
-	addItemToLocalStorge(data);
-
-	form.reset();
-	generateTable(data);
-});
+form.addEventListener("submit", handleAddBook);
