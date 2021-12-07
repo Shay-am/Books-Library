@@ -128,3 +128,69 @@ button:hover {
 .hidden {
 	display: none;
 }
+
+@media only screen and (max-width: 650px) {
+	.h1 {
+		margin: 0;
+	}
+	.main_container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		width: 100vw;
+		margin-top: 1em;
+	}
+	.table_container {
+		width: 100vw;
+		border: 1px solid var(--blue);
+		text-align: center;
+	}
+	.table_caption {
+		width: 100vw;
+	}
+}
+@media only screen and (max-width: 450px) {
+	.form_container {
+		margin-top: 15em;
+		position: relative;
+		height: 50vh;
+
+		box-shadow: 0 0 1em var(--blue);
+	}
+	.form-inputs_container {
+		display: flex;
+		width: 13em;
+		flex-direction: column;
+
+		background-color: var(--blue);
+
+		height: 50vh;
+	}
+	.input {
+		width: 13em;
+		height: 1.5em;
+		margin-top: 0.2em;
+	}
+	.priority_container {
+		justify-content: space-around;
+		width: 11em;
+		color: var(--white);
+	}
+	label {
+		font-size: 0.6em;
+	}
+	legend {
+		font-size: 0.6em;
+	}
+	.input::placeholder {
+		font-size: 0.7em;
+	}
+	.button {
+		top: 3em;
+		left: 10em;
+	}
+	.text_error {
+		font-size: 0.4em;
+	}
+}
