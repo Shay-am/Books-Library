@@ -1,4 +1,4 @@
-import { form, createElementDomTd, createElementDomTr, parentToAppend, validForm } from "./helpers.js";
+import { form, createElementDomTd, createElementDomTr, parentToAppend } from "./helpers.js";
 
 export const addItemToLocalStorge = book => {
 	const books = JSON.parse(localStorage.getItem("books")) || [];
@@ -15,7 +15,7 @@ export const getItemFromLocalStorage = () => {
 export const handleAddBook = e => {
 	e.preventDefault();
 	const data = Object.fromEntries(new FormData(e.target));
-	validForm();
+
 	addItemToLocalStorge(data);
 
 	form.reset();

@@ -1,5 +1,5 @@
-export const qs = selector => document.querySelector(selector);
 import { validInputAuthor, validInputTitle, isPriorityChecked, isCategoryChecked } from "./validForm.js";
+export const qs = selector => document.querySelector(selector);
 
 export const parentToAppend = qs(".parent_tbody");
 export const form = qs("form");
