@@ -21,9 +21,9 @@ const handleToggleClassIsInValid = (input, text) => {
 	text.classList.remove("hidden");
 };
 
-const ruleValidInput = (inputValid, errorField, num, fn) => {
-	let input = inputValid;
-	let text = errorField;
+const ruleValidInput = (inputValid, errorField, num) => {
+	const input = inputValid;
+	const text = errorField;
 	return input.value.length >= num ? handleToggleClassIsValid(input, text) : handleToggleClassIsInValid(input, text);
 };
 

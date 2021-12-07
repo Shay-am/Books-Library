@@ -8,6 +8,7 @@ export const createElementDomTr = () => document.createElement("tr");
 
 export const createElementDomTd = (value, toAppend) => {
 	const td = document.createElement("td");
+	td.classList.add("td");
 	td.textContent = value;
 
 	return toAppend.append(td);
